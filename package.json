@@ -5,6 +5,7 @@
   "description": "Rebuilt for react-bootstrap-table",
   "main": "index.js",
   "scripts": {
+    "prepare": "npm build",
     "postinstall": "lerna bootstrap",
     "build": "./node_modules/.bin/gulp prod",
     "lint": "eslint ./packages --ext .js --ext .jsx --ignore-path .gitignore",
