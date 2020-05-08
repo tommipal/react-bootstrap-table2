@@ -30,7 +30,7 @@ export const transform = (
   }
 ) => {
   const visibleColumns = meta.filter(m => m.export);
-  let content = '';
+  let content = '\uFEFF'; //NOTE: AutoBom doesn't work, so set it manually.
   // extract csv header
   if (!ignoreHeader) {
     content += visibleColumns.map(m => `"${m.header}"`).join(separator);
